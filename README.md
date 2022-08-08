@@ -1,5 +1,5 @@
 # FZM443 Parçacık Hızlandırıcıları Final Projesi
-Bu çalışma Fzm443 - Parçacık Hızlandırıcıları dersi için Güz 2022 döneminde yapılmıştır.
+Bu çalışma Fzm443 - Parçacık Hızlandırıcıları dersi için 2021-2022 Güz döneminde yapılmıştır.
 
 ## Ekran Görüntüsü
 
