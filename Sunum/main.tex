@@ -1,0 +1,482 @@
+\documentclass[aspectratio=169,10pt]{beamer}
+\usepackage{amssymb,amsmath,amsthm,enumerate}
+\usepackage[utf8]{inputenc}
+\usepackage{array}
+\usepackage[parfill]{parskip}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[hmargin=2cm,vmargin=1cm]{geometry}
+\renewcommand{\rmdefault}{bch} % change default font
+\usepackage{tikz} 
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,fit,positioning,shapes.symbols,chains}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+
+\newcommand{\MYhref}[3][blue]{\href{#2}{\color{#1}{#3}}}%
+\usepackage[
+bookmarksopen,
+bookmarksdepth=2,
+breaklinks=true
+]{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{bm}
+\usepackage{amsfonts,amscd}
+\usepackage[]{units}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{physics}
+\date{17 Ocak 2022}
+\logo{\includegraphics[height=0.9cm]{cf674d69eebd62dcc9bcd14cd04488b9.png}\hspace{20pt}\vspace{0pt}} 
+\usetheme{Stanford} 
+\input{./style_files_stanford/my_beamer_defs.sty}
+
+
+\ 
+
+\title{NSLS-II}
+
+\begin{document}
+
+\author[Halil Kolatan]{
+	\begin{tabular}{c} 
+	\huge
+	Halil Kolatan
+\end{tabular}
+\vspace{-3ex}}
+
+\institute{
+
+
+\  
+
+	\vskip 5pt
+	\begin{figure}
+		\centering
+		\begin{subfigure}[t]{0.2\textwidth}
+			\centering
+			\includegraphics[height=0.7in]{cf674d69eebd62dcc9bcd14cd04488b9.png}
+		\end{subfigure}%
+		~ 
+		\begin{subfigure}[t]{0.2\textwidth}
+			\centering
+			\includegraphics[height=0.7in]{Ankara-Üniversitesi-Fen-Fakültesi.png}
+		\end{subfigure}
+	\end{figure}
+	
+	\ 
+	
+	
+	\vskip 5pt\\
+	\Large
+	FZM443 - Parçacık Hızlandırıcıları \\
+	\ 
+	Ankara Üniversitesi	\\
+	\vskip 3pt
+	
+}
+
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{itemize subitem}[circle]
+ 
+\begin{frame}[plain]
+\titlepage 
+\end{frame}
+
+\begin{frame}
+	\frametitle{İçerik} % Table of contents slide, comment this block out to remove it
+	\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+	
+    \section{NSLS-II}
+
+    \begin{frame}[allowframebreaks]
+\frametitle{NSLS-II}
+
+\begin{figure}[h!]
+ \centering
+\includegraphics[width=8cm]{ssözet.png}
+\caption*{Şekil 1. NSLS-II Tesisi [1].}
+	\end{figure}
+
+New York, Upton'daki Brookhaven Ulusal Laboratuvarı'ndaki (BNL) Ulusal Sinkrotron Işınım Kaynağı II (NSLS-II), öncelikle ABD Enerji Bakanlığı'nın (DOE) Bilim Ofisi tarafından finanse edilen bir ulusal kullanıcı araştırma tesisidir. NSLS-II, BNL'nin orijinal ışınım kaynağı olan Ulusal Sinkrotron Işınım Kaynağından (NSLS) 10.000 kat daha parlak x-ışınları üretmek üzere tasarlanmış, dünyanın en gelişmiş sinkrotron ışınım kaynaklarından biridir [2].
+
+
+
+\end{frame}
+
+  \begin{frame}[allowframebreaks]
+  \frametitle{NSLS-II}
+ 
+Yoğun ultra parlak ışığını yaratmak için NSLS-II, elektronları yarım mil (791.958 m) uzunluğundaki halkasının etrafında neredeyse ışık hızında döndüren gelişmiş bir parçacık hızlandırıcı kompleksine sahiptir. NSLS-II'nin hızlandırıcıları birçok karmaşık mühendislik sisteminden oluşur. Bu yoğun, kararlı elektron demetini her yıl 5000 saat kesintisiz olarak çalıştırmak, her entegre bileşene sürekli dikkat gerektirmektedir [3].
+
+NSLS-II'deki disiplinler arası ekipler, dünyanın dört bir yanından gelen araştırmacılarla ortak çalışarak malzemelerin atomik yapısını, temel yapısını ve elektronik davranışlarını ortaya çıkarıyor. Bu yeni, daha derin malzeme anlayışını yaratarak, bu araştırma ekipleri yaşam bilimleri, enerji depolama, ileri malzeme bilimi, fizik, kimya ve biyoloji gibi çok çeşitli bilimsel disiplinlerdeki bilgimizi geliştirmektedir [2].
+
+
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{NSLS-II}
+
+\begin{columns}
+
+\column{0.5\textwidth}
+Şu anda, NSLS-II'nin işletimde olan 28 demet hattı ve yapım aşamasında olan 4 ek demet hattı bulunmaktadır. Depolama halkası rutin olarak 400 mA ve 30 pm-rad dikey yayılımda ve özel çalışma periyotlarında 8 pm-rad'da çalıştırılır. NSLS-II, hızlandırıcı sistemler için çok yıllı bir geliştirme planı uygulamaktadır. Bu tamamlandığında, NSLS -II depolama halkasının 500 mA ve 8 pm -rad dikey emisyon gibi yüksek performans spesifikasyonlarında güvenilir bir şekilde çalıştırılacaktır [4]. 
+ 
+\column{0.5\textwidth}
+\centering
+ \begin{figure}
+\includegraphics[width=7cm]{39344406832_b5a2641959_k.jpg}
+\caption*{
+\centering 
+Şekil 2. NSLS-II Tesisi [1].}
+	\end{figure}
+	\end{columns}
+
+\end{frame}
+
+	
+	\begin{frame}[allowframebreaks]
+\frametitle{NSLS-II}
+
+\begin{columns}
+
+\column{0.5\textwidth}
+NSLS-II, 2015 yılında kullanıcı işlemlerine başladı. 2019 yılında, 1755 farklı araştırmacı araştırmaları için NSLS-II demet hatlarını kullandı. 2020 yılında bu sayı, küresel COVID-19 pandemisinin etkisiyle 1355 oldu. Buna rağmen, NSLS-II 2020 yılında 577 yayın yaptı ve bu yayınların \%40'ından fazlası etki faktörü 7.0'dan büyük olan dergilerde yer aldı ve bu NSLS-II'nin başarısını göstermektedir [4].
+ 
+\column{0.5\textwidth}
+\centering
+ \begin{figure}
+\includegraphics[width=7cm]{27597220709_1e50948a52_k.jpg}
+\caption*{
+\centering
+Şekil 3. NSLS-II Tesisi [1].}
+	\end{figure}
+	\end{columns}
+
+\end{frame}
+
+\section{NSLS II Tesis Tasarımı}
+	\begin{frame}[allowframebreaks]
+	
+	
+	
+\frametitle{NSLS II Tesis Tasarımı}
+
+
+	\begin{figure}[h]
+ \centering
+\includegraphics[width=7.5cm]{nsls2-beamlinesclock-jpg.jpg}
+\caption*{Şekil 4. NSLS-II Demet hattı haritası [6].}
+	\end{figure}
+	
+
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{NSLS II Tesis Tasarımı}
+
+
+	Ulusal Sinkrotron Işınım Kaynağı II (NSLS-II) hızlandırıcı kompleksi, elektronların yaratılmasından parlak sinkrotron ışınımının üretilmesine kadar her şeyi kapsamaktadır. NSLS-II hızlandırıcı kompleksi bir elektron tabancası, bir lineer hızlandırıcı, bir güçlendirici halka ve depolama halkasından oluşur. İlk üç bölüm, elektronları depolama halkası boyunca yolculuklarına hazırlamak için gereklidir, orta enerjili elektron depolama halkası ise parlak ışınım demetleri üreten tüm cihazları içerir [7].
+	
+	Depolama halkasını barındıran deney salonu, 60 demet hattına kadar, hafif taşıma hatlarının bir kombinasyonu ve deney istasyonları için yeterli alan sunar. Bu demet hatları 66 metre ila 72 metre uzunluğunda olabilir. NSLS-II ayrıca, bitişik bir binada bulunan deney istasyonları ile mevcut binanın ötesine geçebilen dokuz ekstra uzun demet hattını barındırabilir. Bu demet hatları yaklaşık 200 m uzunluğundadır [7].
+
+
+\end{frame}
+
+\subsection{Lineer Hızlandırıcı}
+\begin{frame}[allowframebreaks]
+\frametitle{Lineer Hızlandırıcı}
+
+
+NSLS-II lineer hızlandırıcı, BNL ile işbirliği içinde RI Research Instruments, GmbH tarafından geliştirilmiş 200 MeV normal iletken bir lineer hızlandırıcıdır. Bir DC termiyonik elektron Tabancası, demetleme sistemi ve dört adet 3 GHz TW yapısından oluşur. Tabanca tek demet ve çoklu demet modu olmak üzere iki modda çalışabilir.Demetleme bölümü, demet uzunluğunu ns'den $\sim$ 10 ps'ye sıkıştırmak için tasarlanmış 500 MHz alt harmonik ön demetleyici, 3 GHz ön demetleyici ve 3 GHz hareketli dalga demetleyiciden oluşur. Dört adet 3 GHz hareketli dalga yapısı, ışını 200 MeV'ye kadar hızlandırır. Lineer hızlandırıcıya RF gücü sağlamak için üç klistron mevcuttur; bunlardan ikisi kullanımdadır ve üçüncüsü bir klistron arızası durumunda yedektedir. Lineer hızlandırıcıdan, güçlendirici halkaya transfer hattında biri lineer hızlandırıcının kendisinden sonra diğeri de enerji spektrometresinden sonra olmak üzere iki demet kapanı vardır [9].
+
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{Lineer Hızlandırıcı}
+
+	\begin{figure}[h]
+ \centering
+\includegraphics[width=12cm]{linacss.png}
+\caption*{Şekil 5. 200 MeV lineer hızlandırıcının düzeni [8].}
+	\end{figure}
+	
+
+\end{frame}
+
+\subsection{Güçlendirici Halka}
+
+\begin{frame}[allowframebreaks]
+
+\frametitle{Güçlendirici Halka}
+
+\begin{columns}
+
+\column{0.5\textwidth}
+Güçlendirici halkanın çevresi 158,4 metredir ve 60 odaklayıcı dipollü dört dönem birleşik işlevli FODO örgüsü içerir. Güçlendirici manyetik alan ve RF voltajı, demeti 200 MeV'den 3 GeV'a hızlandırmak için yükseltilir. Maksimum dipol alanı 1 T'dır. RF gücü, 90 kW IOT tabanlı bir verici sistemi tarafından sürülen PETRA 7 hücreli 500 MHz Cu-kavitiden demete iletilir. Ekstraksiyon enerjisinde, güçlendirici 37.4 nm-rad'lık düşük yatay yayınım ve ~1 nm-rad dikey yayınım sağlar [9].
+ 
+\column{0.5\textwidth}
+\begin{table}[h!]
+\centering
+\begin{tabular}{@{}|c|c|@{}}
+\toprule
+\multicolumn{2}{|c|}{Güçlendirici Halka Temel Parametreleri}                 \\ \midrule
+Çevresi & 158.4 m \\ \midrule
+Enjeksiyon Enerjisi & 170-200 MeV \\ \midrule
+RF Frekansı & 499.68 MHz \\ \midrule
+RF Voltajı &  1.5 MV \\ \midrule
+Güçlendirici Akımı & 28 mA \\ \midrule
+Yayınım & 26.6 nm \\ \midrule
+Enerji Kaybı/Tur & 625 keV \\ \bottomrule
+\end{tabular}
+\end{table}
+	\end{columns}
+
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]
+\frametitle{Güçlendirici Halka}
+
+			\begin{figure}[h]
+ \centering
+\includegraphics[width=12cm]{booster.png}
+\caption*{Şekil 6. NSLS-II Güçlendirici halka [10].}
+	\end{figure}
+	
+
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]
+\subsection{Enjektör Sistemi}
+\frametitle{Enjektör Sistemi}
+
+	\begin{figure}[h]
+ \centering
+\includegraphics[width=8cm]{map.png}
+\caption*{Şekil 7. NSLS-II Enjektörünün düzeni.}
+	\end{figure}
+\end{frame}
+
+	\subsection{Depolama Halkası}
+\begin{frame}[allowframebreaks]
+
+\frametitle{Depolama Halkası}
+
+	
+NSLS-II depolama halkasının çevresi 792 m'dir. Elektronları halka ve düz bölümler boyunca yönlendiren ve yerleştirme cihazlarını kurmak için kullanılabilen mıknatısların düzenine depolama halkası örgüsü denir. NSLS-II depolama halkası örgüsü, yaklaşık 60 demet hattını barındıracak 30 mıknatıs dizisinden veya çift bükücü akromat (DBA) hücrelerinden oluşur. NSLS-II, 30 hücreli (15 süper periyot) çift bükücü akromat örgüsü, 6.6 m uzunluğunda 15 düşük beta düz bölümü ve 9,3 m uzunluğunda 15 yüksek beta düz bölümü olan 3 GeV depolama halkası sinkrotron ışınım kaynağıdır. Damping Wigglers için üç uzun düz bölüm kullanılır (1,85 T tepe alanı, 0,1 m periyot uzunluğu ve 7 m uzunluk), bu da yatay yayınımı 2,05 nm-rad'dan 1 nm-rad'a düşürmektedir [9]. Ayrıca,
+
+\begin{itemize}
+    \item Kızılötesinden, yumuşak x-ışınlarına kadar foton enerjilerini kapsayan geniş bant kaynakları sağlayan 31 bükücü mıknatıs bağlantı noktası. Bu portlardan herhangi biri, alternatif olarak, sert x-ışını aralığını kapsayan üç kutuplu bir wiggler portu ile değiştirilebilir.
+    
+    \item Çok uzak kızılötesi ışık için büyük boşluk dipolleri üzerinde 4 bükücü mıknatıs bağlantı noktası.
+    
+    \item Ek demet hattı kapasitesi için tek bir düz bölüme birden fazla cihaz eklenebilir.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{Depolama Halkası}
+
+	\begin{figure}[h]
+ \centering
+\includegraphics[width=9cm]{emittence.png}
+\caption*{
+\centering
+Şekil 8. NSLS-II için 0, 1, 2, 3, 5 ve 8 DW (her biri 7 m) olarak yayınım azaltımı 1,8 T tepe alanında kurulur ve çalıştırılır [8].}
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{Depolama Halkası}
+
+	\begin{figure}[h]
+ \centering
+\includegraphics[width=9cm]{status.png}
+\caption*{Şekil 9. NSLS II İşlem durumu [11].}
+	\end{figure} 
+
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]
+\frametitle{Depolama Halkası}
+
+	\begin{figure}[h]
+ \centering
+\includegraphics[width=7cm]{nsls parameter.png}
+\caption*{Şekil 10. NSLS-II hızlandırıcı parametreleri [12].}
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{Depolama Halkası}
+
+		\begin{figure}[h]
+ \centering
+\includegraphics[width=11cm]{latticefunction.png}
+\caption*{Şekil 11. NSLS-II Örgü fonksiyonları [12].}
+	\end{figure}
+
+\end{frame}
+
+
+\section{Enstrümanlar}	
+\begin{frame}[allowframebreaks]
+\frametitle{Enstrümanlar}
+
+Şu anda NSLS-II, yüksek verimli robot güdümlü numune işleme, yüksek uzaysal çözünürlüklü görüntüleme ve yüksek enerji çözünürlüğü dahil olmak üzere benzersiz, son teknoloji araştırma araçları sunan 28 demet hattı çalışmaktadır. NSLS-II'deki tüm demet hatları, sundukları araştırma yeteneklerine ve personel uzmanlığına dayalı olarak beş foton bilimi programına sahiptir [3].
+
+Mevcut demet hatları portföyünün ötesinde, NSLS-II, halihazırda geliştirilmekte olan dört yeni demet hattı ile ek 30 demet hattı kapasitesine sahiptir. Tüm araştırma araçlarının her zaman son teknoloji olmasını sağlamak için, dedektörler, x-ışını optiği, hassas mühendislik ve konumlandırmanın yanı sıra teorik simülasyonlar üzerinde çalışan uzmanlardan oluşan bir ekibe sahiptir [3].
+
+\end{frame}
+
+
+\subsection{Bilim Programları}
+\begin{frame}[allowframebreaks]
+\frametitle{Bilim Programları}
+
+Brookhaven Ulusal Laboratuvarı'ndaki Ulusal Sinkrotron Işınım Kaynağı II (NSLS-II), dünyadaki en yeni, en gelişmiş üçüncü nesil sinkrotron radyasyon tesislerinden biridir. ABD Enerji Bakanlığı Bilim Kullanıcı Tesisi Ofisi olarak NSLS-II, dünya standartlarında yetenekler sağlayarak büyüyen kullanıcı topluluğunun nano ölçekli çözünürlük ve mükemmel hassasiyetle materyalleri incelemesini sağlar. NSLS-II'nin ışın hatları ve deney istasyonları, yüksek verimli robot güdümlü numune işleme, x-ışını saçılımı, benzeri görülmemiş enerji çözünürlüğü x-ışını mikroskobu dahil benzersiz, son teknoloji araştırma araçlarına sahiptir. Demet hatları, sundukları araştırma tekniklerine dayalı olarak beş bilimsel program halinde düzenlenmiştir [13].
+
+\begin{itemize}
+    \item Kompleks Saçılma (Complex Scattering)
+    
+    \item Görüntüleme ve Mikroskopi (Imaging and Microscopy)
+    
+    \item Yapısal Biyoloji (Structural Biology)
+    
+    \item Sert X-ışını Saçılımı ve Spektroskopisi (Hard X-ray Scattering \& Spectroscopy) 
+    
+    \item Yumuşak X-ışını Saçılımı ve Spektroskopisi (Soft X-ray Scattering \& Spectroscopy) 
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]
+\frametitle{Bilim Programları}
+
+		\begin{figure}[h!]
+ \centering
+\includegraphics[width=9cm]{33696668366_c810eac721_k.jpg}
+\caption*{Şekil 12. NSLS-II'de Biyoyakıt araştırması [14].}
+	\end{figure}
+	
+
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{Bilim Programları}
+
+\begin{columns}
+
+\column{0.4\textwidth}
+		\begin{figure}[h!]
+ \centering
+\includegraphics[width=7cm]{program1-1.png}
+\caption*{Şekil 13. Demet hatları ve kullanıldığı bilim programı [12].}
+\end{figure}
+ 
+\column{0.4\textwidth}
+\centering
+		\begin{figure}[h!]
+ \centering
+\includegraphics[width=7cm]{program1-2.png}
+\caption*{Şekil 14. Demet hatları ve kullanıldığı bilim programı [12].}
+\end{figure}
+	\end{columns}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{Bilim Programları}
+
+\begin{columns}
+
+\column{0.4\textwidth}
+		\begin{figure}[h!]
+ \centering
+\includegraphics[width=7cm]{program 2.png}
+\caption*{Şekil 15. Demet hatları ve kullanıldığı bilim programı [12].}
+\end{figure}
+ 
+\column{0.4\textwidth}
+\centering
+		\begin{figure}[h!]
+ \centering
+\includegraphics[width=7cm]{program2.2.png}
+\caption*{Şekil 16. Demet hatları ve kullanıldığı bilim programı [12].}
+\end{figure}
+	\end{columns}
+\end{frame}
+
+
+\section{Gelecek Planlar}
+\begin{frame}[allowframebreaks]
+\frametitle{Gelecek Planlar}
+
+NSLS-II Ekibinin önümüzdeki 5 yıllık stratejileri:
+
+\begin{itemize}
+    \item Güvenilir kullanıcı operasyonlarında 500 mA ve 8 pm-rad dikey yayınımlı olgun hızlandırıcı performansı sağlamak
+    \item Mevcut demet hatlarını yeniden sermayelendirmek ve COVID sonrası dönemde yeni erişim modaliteleriyle rekabet etmelerini sağlamak
+    \item Veri depolama ve analizini geliştirmek
+    \item HEX demet hattını ve NEXT-II projesini tamamlamak
+    \item Tesisin konumunu gelecek on yılda yükseltmek
+\end{itemize}
+
+\end{frame}
+
+
+\section{Kaynakça}
+% `[allowframebreaks]` can be used to have multiple slides in one frame, where the slides are continued with the suffix "(cont.)"; `[allowframebreaks]` can be used with `\framebreak` to manually break each frame into multiple slides
+\begin{frame}[allowframebreaks]
+\frametitle{Kaynakça}
+
+	\begin{thebibliography}{99}
+	
+			\bibitem{mano} (Dijital Görsel) \textit{National Synchrotron Light Source II (NSLS-II)}. Erişim adresi: \url{https://science.osti.gov/bes/suf/User-Facilities/X-Ray-Light-Sources/NSLS-II}. Erişim tarihi: 03.01.2022.
+	
+	\bibitem{mano} National Synchrotron Light Source II. InWikipedia, Özgür Ansiklopedi. \url{https://en.wikipedia.org/wiki/National_Synchrotron_Light_Source_II}. Erişim tarihi: 03.01.2022.  
+	
+	\bibitem{mano} About NSLS-II (n.d.). Erişim adresi: \url{https://www.bnl.gov/nsls2/about-nsls-ii.php} Erişim tarihi: 03.01.2022.
+	
+	\bibitem{mano} Accelerator Division (n.d.). Erişim adresi: \url{https://www.bnl.gov/nsls2/accelerator/} Erişim tarihi: 03.01.2022.
+	
+	\bibitem{mano} National Synchrotron Light Source II (2021). \textit{2022 NSLS-II Strategic Plan}. Erişim adresi: \url{https://www.bnl.gov/nsls2/docs/pdf/nsls2-strategic-plan.pdf} Erişim tarihi: 03.01.2022.
+	
+	\bibitem{mano} (Dijital Görsel) \textit{NSLS-II Beamline Map} Erişim Adresi: \url{https://www.bnl.gov/nsls2/beamlines/map.php}. Erişim tarihi: 07.01.2022.
+	
+	 \bibitem{mano} Accelerator Division (n.d.). Erişim adresi: \url{https://www.bnl.gov/nsls2/accelerator/machine.php} Erişim tarihi: 16.01.2022.
+	 
+	  \bibitem{mano} Dierker, S. (2007). \textit{National Synchrotron Light Source II
+Preliminary Design Report}. Erişim adresi: \url{https://www.bnl.gov/isd/documents/75003.pdf} Erişim tarihi: 16.01.2022.
+	
+	
+	\bibitem{mano} Wang, G. et al. (2016). \textit{NSLS-II commissioning and operation.} AIP Conference Proceedings 1741, 020007. doi:10.1063/1.4952786.
+	
+	\bibitem{mano} Gurov S. et al. (2014). \textit{The NSLS-II Booster Commissioning.}  Proc. 5th Int. Particle Accelerator Conf. (IPAC'14), Dresden, Germany, 295-297. doi:10.18429/JACoW-IPAC2014-MOPRO088.
+	
+	\bibitem{mano} (Dijital Görsel) \textit{NSLS II Operations Status} Erişim Adresi: \url{https://status.nsls2.bnl.gov/}. Erişim tarihi: 16.01.2022.
+	
+	 \bibitem{mano} NSLS-II Accelerator Parameters (n.d.). Erişim adresi: \url{https://www.bnl.gov/nsls2/accelerator/docs/accelerator-parameters.pdf} Erişim tarihi: 16.01.2022.
+
+   \bibitem{mano} Science Programs (n.d.). Erişim adresi: \url{https://www.bnl.gov/nsls2/programs/} Erişim tarihi: 16.01.2022.
+   
+   \bibitem{mano} (Dijital Görsel) \textit{Biofuel Research at NSLS-II} Erişim Adresi: \url{https://www.flickr.com/photos/brookhavenlab/33696668366/in/album-72157615585907461/}.
+   Erişim tarihi: 16.01.2022.
+	\end{thebibliography}
+	
+\end{frame}
+\end{document}
